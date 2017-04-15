@@ -1,8 +1,8 @@
 function Emote(key) {
 
     this.startTime = new Date().getTime()
-    this.x = Math.floor(Math.random(56) * width-56)
-    this.y = Math.floor(Math.random(56) * height-56)
+    this.x = Math.floor(Math.random(100) * width-100)
+    this.y = Math.floor(Math.random(100) * height-100)
     this.img = loadImage(`https://static-cdn.jtvnw.net/emoticons/v1/${key}/3.0`)
     
     this.offset = 255

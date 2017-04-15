@@ -14,7 +14,7 @@ var options = {
 }
 
 function setup() {
-    createCanvas(1280, 720)
+    createCanvas(window.innerWidth, window.innerHeight)
 }
 
 function draw() {
