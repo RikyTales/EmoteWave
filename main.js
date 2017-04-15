@@ -5,6 +5,7 @@ var options = {
     },
     connection: {
         reconnect: true,
+        secure: true
     },
     channels: ["#rikitales"]
 }
