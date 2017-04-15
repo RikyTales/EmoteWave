@@ -1,3 +1,6 @@
+var params = window.location.search.slice(1)
+var searchParams = new URLSearchParams(params)
+var channel = searchParams.get("channel") || "rikitales"
 var currentEmotes = []
 var options = {
     options: {
@@ -7,7 +10,7 @@ var options = {
         reconnect: true,
         secure: true
     },
-    channels: ["#rikitales"]
+    channels: [`#${channel}`]
 }
 
 function setup() {
