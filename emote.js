@@ -1,7 +1,7 @@
 function Emote(key) {
 
     this.x = random(100, width-100)
-    this.y = random(100, height-300)
+    this.y = random(300, height-100)
     this.img = loadImage(`https://static-cdn.jtvnw.net/emoticons/v1/${key}/3.0`)
     
     this.angle = 0
