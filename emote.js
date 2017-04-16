@@ -6,24 +6,21 @@ function Emote(key) {
     
     this.angle = 0
     this.amplitude = 3
-    this.initialFrameCount = frameCount
-    this.frameCount = this.initialFrameCount
-    this.offset = 255
+    this.lifespan = 255
     this.upwardsSpeed = random(2, 5)
 
     this.render = function() {
         image(this.img, this.x, this.y)
-        tint(255, this.offset)
+        tint(255, this.lifespan)
     
         this.x += this.amplitude*sin(this.angle)
         this.y -= this.upwardsSpeed
         this.angle += 0.07
-        this.offset -= 2
-        this.frameCount += 1
+        this.lifespan -= 2
     }
     
     this.delete = function() {
-        if (this.frameCount === this.initialFrameCount + 150) {
+        if (this.lifespan < 0) {
             currentEmotes.splice(this, 1)
         }
     }

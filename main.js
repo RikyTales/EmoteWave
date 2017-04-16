@@ -1,6 +1,7 @@
 var params = window.location.search.slice(1)
 var searchParams = new URLSearchParams(params)
 var channel = searchParams.get("channel") || "rikitales"
+
 var currentEmotes = []
 var options = {
     options: {
@@ -19,7 +20,7 @@ function setup() {
 
 function draw() {
     clear()
-    for (var i = 0; i < currentEmotes.length; i++) {
+    for (var i = currentEmotes.length-1; i >= 0; i--) {
         currentEmotes[i].render()
         currentEmotes[i].delete()
     }
