@@ -16,7 +16,7 @@ function Emote(key) {
         this.x += this.amplitude*sin(this.angle)
         this.y -= this.upwardsSpeed
         this.angle += 0.07
-        this.lifespan -= 2
+        this.lifespan -= 3
     }
     
     this.delete = function() {
