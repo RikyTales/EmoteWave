@@ -9,7 +9,7 @@ function Emote(key) {
     this.lifespan = 255
     this.upwardsSpeed = random(2, 5)
 
-    this.render = function() {
+    this.update = function() {
         image(this.img, this.x, this.y)
         tint(255, this.lifespan)
     
@@ -17,11 +17,9 @@ function Emote(key) {
         this.y -= this.upwardsSpeed
         this.angle += 0.07
         this.lifespan -= 3
-    }
-    
-    this.delete = function() {
         if (this.lifespan < 0) {
-            currentEmotes.splice(this, 1)
+            var index = currentEmotes.indexOf(this)
+            currentEmotes.splice(index, 1)
         }
     }
 }

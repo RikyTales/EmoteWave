@@ -21,8 +21,7 @@ function setup() {
 function draw() {
     clear()
     for (var i = currentEmotes.length-1; i >= 0; i--) {
-        currentEmotes[i].render()
-        currentEmotes[i].delete()
+        currentEmotes[i].update()
     }
 }
 
